@@ -27,6 +27,21 @@ SECRET_KEY = 'django-insecure-b5*+m+bf_)b$6-@yga6@%^s22qi7e98z*761+$0%mh91x&n9^b
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'firstdatabas',            # Your PostgreSQL database name
+        'USER': 'chandra',            # Your PostgreSQL username
+        'PASSWORD': '@epetra',        # Your PostgreSQL password
+        'HOST': 'localhost',             # Your database host (default is 'localhost')
+        'PORT': '5432',                  # Your database port (default is 5432)
+    }
+}
+
+#Austhorizing user module
+AUTH_USER_MODEL = 'polls.CustomUser'
+
 
 
 # Application definition
@@ -75,12 +90,6 @@ WSGI_APPLICATION = 'sample_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
